@@ -3,9 +3,9 @@
 (function () {
   angular.module('app', ['ngRoute', 'ngMaterialDatePicker']).config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider.when('/dashboard', {
-      template: '<dashboard></dashboard>'
+      template: '<dashboard style="height:100%;"></dashboard>'
     }).otherwise({
-      template: '<dashboard></dashboard>'
+      template: '<dashboard style="height:100%;"></dashboard>'
       //redirectTo: '/dashboard'
     });
 

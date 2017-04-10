@@ -3,9 +3,18 @@
   border-radius: 50%;
   background: #f3f3f3 url(../images/ios_clock.svg) no-repeat center;
   background-size: 88%;
-  height: 20em;
   position: relative;
-  width: 20em;
+  width:20em;
+  height:20em;
+  margin-top:30px;
+}
+
+#containsAll {
+  width:100%;
+  height:100%;
+  padding-top:30px;
+  margin-top:30px;
+  flex-grow:1;
 }
 
 .clock:after {
@@ -74,15 +83,6 @@
   padding:30px;
 }
 
-.inputdemoIcons .inputIconDemo {
-  min-height: 48px; }
-.inputdemoIcons md-input-container:not(.md-input-invalid) > md-icon.email {
-  color: green; }
-.inputdemoIcons md-input-container:not(.md-input-invalid) > md-icon.name {
-  color: dodgerblue; }
-.inputdemoIcons md-input-container.md-input-invalid > md-icon.email,
-.inputdemoIcons md-input-container.md-input-invalid > md-icon.name {
-  color: red; }
 
 
 
@@ -93,7 +93,8 @@
 }
 
 </style>
-<div class="container inputdemoIcons">
+<md-content flex layout="column" id="containsAll">
+  <div layout="column" layout-align="center center" flex-100>
   <h1>Live Editable Clock</h1>
   
   <article class="clock">
@@ -107,10 +108,10 @@
     <div class="seconds"></div>
   </div>
 </article>
-
-<div class="inner-form">
-  
-<md-input-container class="md-block">
+  </div>
+<div layout="column" class="inner-form">
+  <div flex-100>
+  <md-input-container class="md-block">
       <!-- Use floating placeholder instead of label -->
       <input ng-model="vm.user.name" type="text" placeholder="Name" ng-required="true">
     </md-input-container>
@@ -127,7 +128,8 @@
       <input ng-change="vm.timeChanged()" placeholder="Appointment" mdc-datetime-picker="" date="false" time="true" type="text" id="time" short-time="true" min-date="minDate" format="hh:mm a" ng-model="vm.clock"
         readonly="readonly">
     </md-input-container>
+  </div>
     </div>
 
 
-</div>
+</md-content>

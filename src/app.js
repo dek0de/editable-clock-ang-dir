@@ -5,10 +5,10 @@
   .config(['$routeProvider', '$locationProvider',($routeProvider, $locationProvider) => {
     $routeProvider
     .when('/dashboard', {
-      template: '<dashboard></dashboard>'
+      template: '<dashboard style="height:100%;"></dashboard>'
     })
     .otherwise({
-      template: '<dashboard></dashboard>'
+      template: '<dashboard style="height:100%;"></dashboard>'
       //redirectTo: '/dashboard'
     });
 
