@@ -44,6 +44,16 @@ gulp.task('html', () => {
   .pipe(gulp.dest('dist'));
 });
 
+gulp.task('css', () => {
+  gulp.src('src/**/*.css')
+  .pipe(gulp.dest('dist'));
+});
+
+gulp.task('buildjs', () => {
+  gulp.src('src/**/*.js')
+  .pipe(gulp.dest('dist'));
+});
+
 gulp.task('sass', () => {
   return gulp.src('src/**/*.scss')
     .pipe(sass().on('error', sass.logError))
@@ -69,7 +79,7 @@ gulp.task('watch', () => {
 });
 
 // build task
-gulp.task('build', ['copy', 'html', 'sass', 'transpile']);
+gulp.task('build', ['copy', 'html', 'css', 'buildjs', 'sass', 'transpile']);
 
 // server
 gulp.task('serve', ['build', 'watch'], () => {
