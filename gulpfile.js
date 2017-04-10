@@ -54,17 +54,17 @@ gulp.task('sass', () => {
 gulp.task('watch', () => {
   watch('src/**/*.js', () => {
     gulp.start('transpile');
-    browserSync.reload();
+    //browserSync.reload();
   });
 
   watch('src/**/*.html', () => {
     gulp.start('html');
-    browserSync.reload();
+    //browserSync.reload();
   });
 
   watch('src/**/*.scss', () => {
     gulp.start('sass');
-    browserSync.reload();
+    //browserSync.reload();
   });
 });
 
@@ -82,10 +82,10 @@ gulp.task('serve', ['build', 'watch'], () => {
 });
 
 // unit testing
-gulp.task('test', (done) => {
-  const Server = karma.Server;
-  return new Server({
-    configFile: __dirname + '/karma.conf.js',
-    singleRun: true
-  }, done).start();
-});
+// gulp.task('test', (done) => {
+//   const Server = karma.Server;
+//   return new Server({
+//     configFile: __dirname + '/karma.conf.js',
+//     singleRun: true
+//   }, done).start();
+// });
