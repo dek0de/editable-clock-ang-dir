@@ -54,17 +54,17 @@ gulp.task('sass', () => {
 gulp.task('watch', () => {
   watch('src/**/*.js', () => {
     gulp.start('transpile');
-    //browserSync.reload();
+    browserSync.reload();
   });
 
   watch('src/**/*.html', () => {
     gulp.start('html');
-    //browserSync.reload();
+    browserSync.reload();
   });
 
   watch('src/**/*.scss', () => {
     gulp.start('sass');
-    //browserSync.reload();
+    browserSync.reload();
   });
 });
 
@@ -76,8 +76,8 @@ gulp.task('serve', ['build', 'watch'], () => {
   browserSync.init({
       server: {
           baseDir: './dist',
-      },
-      middleware : [historyApiFallback()]
+          proxy: "https://editable-clock-ang-dir.herokuapp.com/",
+      }
   });
 });
 
