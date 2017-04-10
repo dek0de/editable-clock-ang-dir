@@ -54,6 +54,11 @@ gulp.task('buildjs', () => {
   .pipe(gulp.dest('dist'));
 });
 
+gulp.task('copyimg', () => {
+  gulp.src('src/images/*.*')
+  .pipe(gulp.dest('dist/images'))
+})
+
 gulp.task('sass', () => {
   return gulp.src('src/**/*.scss')
     .pipe(sass().on('error', sass.logError))
