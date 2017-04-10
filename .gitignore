@@ -28,9 +28,9 @@ build/Release
 dist
 
 # Dependency directories
-# node_modules
+node_modules
 jspm_packages
-# bower_components
+bower_components
 
 # Optional npm cache directory
 .npm
