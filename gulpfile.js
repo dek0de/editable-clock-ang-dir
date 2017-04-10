@@ -74,6 +74,7 @@ gulp.task('build', ['copy', 'html', 'sass', 'transpile']);
 // server
 gulp.task('serve', ['build', 'watch'], () => {
   browserSync.init({
+     
       server: {
           baseDir: './dist',
       },
