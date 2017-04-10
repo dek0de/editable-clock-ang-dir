@@ -77,6 +77,8 @@ gulp.task('serve', ['build', 'watch'], () => {
       server: {
           baseDir: './dist',
       },
+      port:
+        process.env.PORT || 5000,
       options: {
         open: 'external',
         host: 'https://editable-clock-ang-dir.herokuapp.com/',
