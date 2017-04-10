@@ -55,8 +55,8 @@ gulp.task('buildjs', () => {
 });
 
 gulp.task('copyimg', () => {
-  gulp.src('src/images/*.*')
-  .pipe(gulp.dest('dist/images'))
+  gulp.src('src/**/*.svg')
+  .pipe(gulp.dest('dist'))
 })
 
 gulp.task('sass', () => {
@@ -84,7 +84,7 @@ gulp.task('watch', () => {
 });
 
 // build task
-gulp.task('build', ['copy', 'html', 'css', 'buildjs', 'sass', 'transpile']);
+gulp.task('build', ['copy', 'html', 'css', 'buildjs', 'copyimg', 'sass', 'transpile']);
 
 // server
 gulp.task('serve', ['build', 'watch'], () => {
