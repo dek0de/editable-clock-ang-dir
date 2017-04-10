@@ -5,7 +5,8 @@
     $routeProvider.when('/dashboard', {
       template: '<dashboard></dashboard>'
     }).otherwise({
-      redirectTo: '/dashboard'
+      template: '<dashboard></dashboard>'
+      //redirectTo: '/dashboard'
     });
 
     $locationProvider.html5Mode(true);
