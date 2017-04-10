@@ -73,12 +73,12 @@ gulp.task('build', ['copy', 'html', 'sass', 'transpile']);
 
 // server
 gulp.task('serve', [] , () => {
-  browserSync.init({
-      server: {
-          baseDir: './dist',
-      },
-      middleware : [historyApiFallback()]
-  });
+  // browserSync.init({
+  //     server: {
+  //         baseDir: './dist',
+  //     },
+  //     middleware : [historyApiFallback()]
+  // });
 });
 
 // unit testing
