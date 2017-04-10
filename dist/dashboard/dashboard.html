@@ -129,6 +129,9 @@
       <input ng-change="vm.timeChanged()" placeholder="Appointment" mdc-datetime-picker="" date="false" time="true" type="text" id="time" short-time="true" min-date="minDate" format="hh:mm a" ng-model="vm.clock"
         readonly="readonly">
     </md-input-container>
+    <md-content layout="row" layout-align="end center">
+      <md-button class="md-raised md-primary pull-right">Submit</md-button>
+    </md-content>
   </div>
     </div>
 
