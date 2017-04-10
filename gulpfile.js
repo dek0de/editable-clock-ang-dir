@@ -76,7 +76,6 @@ gulp.task('serve', ['build', 'watch'], () => {
   browserSync.init({
       server: {
           baseDir: './dist',
-          proxy: "https://editable-clock-ang-dir.herokuapp.com/",
       }
   });
 });
