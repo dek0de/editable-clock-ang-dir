@@ -72,7 +72,7 @@ gulp.task('watch', () => {
 gulp.task('build', ['copy', 'html', 'sass', 'transpile']);
 
 // server
-gulp.task('serve', ['build', 'watch'], () => {
+gulp.task('serve', , () => {
   browserSync.init({
       server: {
           baseDir: './dist',
