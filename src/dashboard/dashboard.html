@@ -51,7 +51,7 @@
 }
 
 .minutes {
-  background: #000;
+  background: darkred;
   height: 40%;
   left: 49%;
   position: absolute;
@@ -78,7 +78,7 @@
 
 </style
 <div class="container">
-  <h1>Hello world !!</h1>
+  <h1>Live Editable Clock</h1>
   <article class="clock">
   <div class="hours-container">
     <div class="hours"></div>
@@ -93,7 +93,7 @@
 
 <div>
 <input ng-change="vm.timeChanged()" mdc-datetime-picker="" date="false" time="true" type="text" id="time" short-time="true"
-placeholder="Time" min-date="minDate" format="hh:mm:ss a" ng-model="vm.clock" class=" md-input"
+placeholder="Time" min-date="minDate" format="hh:mm a" ng-model="vm.clock" class="md-input"
 readonly="readonly">
 </div>
 
