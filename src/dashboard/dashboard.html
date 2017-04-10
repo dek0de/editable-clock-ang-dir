@@ -51,7 +51,7 @@
 }
 
 .minutes {
-  background: darkred;
+  background: #000;
   height: 40%;
   left: 49%;
   position: absolute;
@@ -60,7 +60,7 @@
   width: 2%;
 }
 .seconds {
-  background: #000;
+  background: #dd2c00;
   height: 45%;
   left: 49.5%;
   position: absolute;
@@ -70,15 +70,32 @@
   z-index: 8;
 }
 
+.inner-form {
+  padding:30px;
+}
+
+.inputdemoIcons .inputIconDemo {
+  min-height: 48px; }
+.inputdemoIcons md-input-container:not(.md-input-invalid) > md-icon.email {
+  color: green; }
+.inputdemoIcons md-input-container:not(.md-input-invalid) > md-icon.name {
+  color: dodgerblue; }
+.inputdemoIcons md-input-container.md-input-invalid > md-icon.email,
+.inputdemoIcons md-input-container.md-input-invalid > md-icon.name {
+  color: red; }
+
+
+
 @keyframes rotate {
   100% {
     transform: rotateZ(360deg);
   }
 }
 
-</style
-<div class="container">
+</style>
+<div class="container inputdemoIcons">
   <h1>Live Editable Clock</h1>
+  
   <article class="clock">
   <div class="hours-container">
     <div class="hours"></div>
@@ -91,11 +108,26 @@
   </div>
 </article>
 
-<div>
-<input ng-change="vm.timeChanged()" mdc-datetime-picker="" date="false" time="true" type="text" id="time" short-time="true"
-placeholder="Time" min-date="minDate" format="hh:mm a" ng-model="vm.clock" class="md-input"
-readonly="readonly">
-</div>
+<div class="inner-form">
+  
+<md-input-container class="md-block">
+      <!-- Use floating placeholder instead of label -->
+      <input ng-model="vm.user.name" type="text" placeholder="Name" ng-required="true">
+    </md-input-container>
+
+    <md-input-container class="md-block">
+      <!-- Use floating placeholder instead of label -->
+      <input ng-model="vm.user.phone" type="tel" placeholder="Phone">
+    </md-input-container>
+    <md-input-container class="md-block">
+      <!-- Use floating placeholder instead of label -->
+      <input ng-model="vm.user.email" type="email" placeholder="Email (required)" ng-required="true">
+    </md-input-container>
+    <md-input-container class="md-block">
+      <input ng-change="vm.timeChanged()" placeholder="Appointment" mdc-datetime-picker="" date="false" time="true" type="text" id="time" short-time="true" min-date="minDate" format="hh:mm a" ng-model="vm.clock"
+        readonly="readonly">
+    </md-input-container>
+    </div>
 
 
 </div>
