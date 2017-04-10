@@ -79,9 +79,9 @@ gulp.task('serve', ['build', 'watch'], () => {
       },
       options: {
         open: 'external',
-        host: 'mydoman.com',
+        host: 'https://editable-clock-ang-dir.herokuapp.com/',
         proxy: {
-        target: "https://editable-clock-ang-dir.herokuapp.com/",
+        target: 'https://editable-clock-ang-dir.herokuapp.com/dashboard',
         }
       }
   });
